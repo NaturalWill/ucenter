@@ -26,10 +26,6 @@ define('UC_LOGIN_ERROR_FAILEDLOGIN', -5);
 class control extends adminbase {
 
 	function __construct() {
-		$this->control();
-	}
-
-	function control() {
 		parent::__construct();
 		if(getgpc('a') != 'login' && getgpc('a') != 'logout') {
 			if(!$this->user['isfounder'] && !$this->user['allowadminuser']) {

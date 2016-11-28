@@ -12,10 +12,6 @@
 class control extends adminbase {
 
 	function __construct() {
-		$this->control();
-	}
-
-	function control() {
 		parent::__construct();
 		$this->check_priv();
 		if(!$this->user['isfounder'] && !$this->user['allowadminlog']) {

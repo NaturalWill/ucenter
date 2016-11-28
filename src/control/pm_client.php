@@ -12,10 +12,6 @@
 class pm_clientcontrol extends base {
 
 	function __construct() {
-		$this->pm_clientcontrol();
-	}
-
-	function pm_clientcontrol() {
 		parent::__construct();
 		if(!$this->settings['pmcenter']) {
 			exit('PMCenter closed');

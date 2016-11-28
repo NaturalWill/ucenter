@@ -17,10 +17,6 @@ class feedmodel {
 	var $operations = array();
 
 	function __construct(&$base) {
-		$this->feedmodel($base);
-	}
-
-	function feedmodel(&$base) {
 		$this->base = $base;
 		$this->db = $base->db;
 	}

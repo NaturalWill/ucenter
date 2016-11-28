@@ -14,10 +14,6 @@ class control extends adminbase {
 	var $_setting_items = array('doublee', 'accessemail', 'censoremail', 'censorusername', 'dateformat', 'timeoffset', 'timeformat', 'extra', 'maildefault', 'mailsend', 'mailserver', 'mailport', 'mailauth', 'mailfrom', 'mailauth_username', 'mailauth_password', 'maildelimiter', 'mailusername', 'mailsilent', 'pmcenter', 'privatepmthreadlimit', 'chatpmthreadlimit', 'chatpmmemberlimit', 'pmfloodctrl', 'sendpmseccode', 'pmsendregdays');
 
 	function __construct() {
-		$this->control();
-	}
-
-	function control() {
 		parent::__construct();
 		$this->check_priv();
 		if(!$this->user['isfounder'] && !$this->user['allowadminsetting']) {

@@ -17,10 +17,6 @@ class pluginbase extends adminbase {
 	var $plugins = array();
 
 	function __construct() {
-		$this->control();
-	}
-
-	function pluginbase() {
 		parent::__construct();
 		$this->check_priv();
 		if(!$this->user['isfounder']) {

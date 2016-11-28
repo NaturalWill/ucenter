@@ -16,10 +16,6 @@ class control extends adminbase {
 	var $friends;
 
 	function __construct() {
-		$this->control();
-	}
-
-	function control() {
 		parent::__construct();
 	}
 

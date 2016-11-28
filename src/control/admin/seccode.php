@@ -12,10 +12,6 @@
 class control extends base {
 
 	function __construct() {
-		$this->control();
-	}
-
-	function control() {
 		parent::__construct();
 		$authkey = md5(UC_KEY.$_SERVER['HTTP_USER_AGENT'].$this->onlineip);
 

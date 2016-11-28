@@ -14,10 +14,6 @@ class adminbase extends base {
 	var $cookie_status = 1;
 
 	function __construct() {
-		$this->adminbase();
-	}
-
-	function adminbase() {
 		parent::__construct();
 		$this->cookie_status = isset($_COOKIE['sid']) ? 1 : 0;
 		$sid = $this->cookie_status ? getgpc('sid', 'C') : rawurlencode(getgpc('sid', 'R'));

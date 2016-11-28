@@ -12,10 +12,6 @@
 class control extends adminbase {
 
 	function __construct() {
-		$this->control();
-	}
-
-	function control() {
 		parent::__construct();
 		$this->load('user');
 		$this->check_priv();

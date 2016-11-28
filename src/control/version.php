@@ -12,10 +12,6 @@
 class versioncontrol extends base {
 
 	function __construct() {
-		$this->versioncontrol();
-	}
-
-	function versioncontrol() {
 		parent::__construct();
 		$this->load('version');
 	}

@@ -15,10 +15,6 @@ class control extends adminbase {
 	var $operations = array();
 
 	function __construct() {
-		$this->control();
-	}
-
-	function control() {
 		parent::__construct();
 		$this->check_priv();
 		if(!$this->user['isfounder'] && !$this->user['allowadminnote']) {
@@ -65,7 +61,7 @@ class control extends adminbase {
 
 		$this->view->assign('status', $status);
 		$this->view->assign('applist', $this->apps);
-		$this->_format_notlist(&$notelist);
+		$this->_format_notlist($notelist);
 		$this->view->assign('notelist', $notelist);
 		$this->view->assign('multipage', $multipage);
 

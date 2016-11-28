@@ -15,10 +15,6 @@ class control extends adminbase {
 	var $operations = array();
 
 	function __construct() {
-		$this->control();
-	}
-
-	function control() {
 		parent::__construct();
 		if(!$this->user['isfounder'] && !$this->user['allowadminnote']) {
 			$this->message('no_permission_for_this_module');

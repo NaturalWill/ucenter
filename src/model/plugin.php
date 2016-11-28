@@ -15,10 +15,6 @@ class pluginmodel {
 	var $base;
 
 	function __construct(&$base) {
-		$this->pluginmodel($base);
-	}
-
-	function pluginmodel(&$base) {
 		$this->base = $base;
 		$this->db = $base->db;
 	}

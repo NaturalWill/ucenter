@@ -12,10 +12,6 @@
 class creditcontrol extends base {
 
 	function __construct() {
-		$this->creditcontrol();
-	}
-
-	function creditcontrol() {
 		parent::__construct();
 		$this->init_input();
 		$this->load('note');

@@ -7,8 +7,8 @@ class control extends pluginbase {
 
 	var $md5data = array();
 
-	function control() {
-		$this->pluginbase();
+	function __construct() {
+		parent::__construct();
 	}
 
 	function onindex() {

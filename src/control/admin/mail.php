@@ -15,10 +15,6 @@ class control extends adminbase {
 	var $operations = array();
 
 	function __construct() {
-		$this->control();
-	}
-
-	function control() {
 		parent::__construct();
 		$this->check_priv();
 		$this->load('mail');

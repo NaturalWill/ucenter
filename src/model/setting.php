@@ -15,10 +15,6 @@ class settingmodel {
 	var $base;
 
 	function __construct(&$base) {
-		$this->settingmodel($base);
-	}
-
-	function settingmodel(&$base) {
 		$this->base = $base;
 		$this->db = $base->db;
 	}

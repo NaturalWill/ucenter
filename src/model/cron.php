@@ -15,10 +15,6 @@ class cronmodel {
 	var $base;
 
 	function __construct(&$base) {
-		$this->cronmodel($base);
-	}
-
-	function cronmodel(&$base) {
 		$this->base = $base;
 		$this->db = $base->db;
 	}

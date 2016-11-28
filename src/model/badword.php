@@ -15,10 +15,6 @@ class badwordmodel {
 	var $base;
 
 	function __construct(&$base) {
-		$this->badwordmodel($base);
-	}
-
-	function badwordmodel(&$base) {
 		$this->base = $base;
 		$this->db = $base->db;
 	}

@@ -7,10 +7,6 @@ class control extends adminbase {
 	var $complete = TRUE;
 
 	function __construct() {
-		$this->control();
-	}
-
-	function control() {
 		parent::__construct();
 		$this->check_priv();
 		if(!$this->user['isfounder'] && !$this->user['allowadmindb']) {
@@ -248,7 +244,7 @@ class control extends adminbase {
 			while($row = $this->db->fetch_row($rows)) {
 				$comma = $t = '';
 				for($i = 0; $i < $numfields; $i++) {
-					$t .= $comma.($usehex && !empty($row[$i]) && (strpos($tablefields[$i]['Type'], 'char') !== FALSE || strpos($tablefields[$i]['Type'], 'text') !== FALSE) ? '0x'.bin2hex($row[$i]) : '\''.mysql_escape_string($row[$i]).'\'');
+					$t .= $comma.($usehex && !empty($row[$i]) && (strpos($tablefields[$i]['Type'], 'char') !== FALSE || strpos($tablefields[$i]['Type'], 'text') !== FALSE) ? '0x'.bin2hex($row[$i]) : '\''.$this->db->escape_string($row[$i]).'\'');
 					$comma = ',';
 				}
 				if(strlen($t) + $currsize + strlen($tabledump) + 500 < $this->sizelimit * 1000) {

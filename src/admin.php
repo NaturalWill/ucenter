@@ -8,7 +8,7 @@
 */
 
 error_reporting(0);
-set_magic_quotes_runtime(0);
+//set_magic_quotes_runtime(0);
 
 $mtime = explode(' ', microtime());
 $starttime = $mtime[1] + $mtime[0];
@@ -20,7 +20,7 @@ define('UC_DATADIR', UC_ROOT.'data/');
 define('UC_DATAURL', UC_API.'/data');
 define('MAGIC_QUOTES_GPC', get_magic_quotes_gpc());
 
-unset($GLOBALS, $_ENV, $HTTP_GET_VARS, $HTTP_POST_VARS, $HTTP_COOKIE_VARS, $HTTP_SERVER_VARS, $HTTP_ENV_VARS);
+unset($GLOBALS, $_ENV/*, $HTTP_GET_VARS, $HTTP_POST_VARS, $HTTP_COOKIE_VARS, $HTTP_SERVER_VARS, $HTTP_ENV_VARS*/);
 
 $_GET		= daddslashes($_GET, 1, TRUE);
 $_POST		= daddslashes($_POST, 1, TRUE);

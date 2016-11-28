@@ -15,10 +15,6 @@ class versionmodel {
 	var $base;
 
 	function __construct(&$base) {
-		$this->versionmodel($base);
-	}
-
-	function versionmodel(&$base) {
 		$this->base = $base;
 		$this->db = $base->db;
 	}
