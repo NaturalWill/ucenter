@@ -169,14 +169,20 @@ class template {
 		}
 		$sid = rawurlencode($this->sid);
 		$searcharray = array(
-			"/\<a(\s*[^\>]+\s*)href\=([\"|\']?)([^\"\'\s]+)/ies",
+			"/\<a(\s*[^\>]+\s*)href\=([\"|\']?)([^\"\'\s]+)/is",
 			"/(\<form.+?\>)/is"
 		);
 		$replacearray = array(
 			"\$this->_transsid('\\3','<a\\1href=\\2')",
 			"\\1\n<input type=\"hidden\" name=\"sid\" value=\"".rawurldecode(rawurldecode(rawurldecode($sid)))."\" />"
 		);
-		$content = preg_replace($searcharray, $replacearray, ob_get_contents());
+		
+		$content = ob_get_contents();
+		$content=preg_replace_callback($searcharray[0], function ($matches){
+			return $this->_transsid($matches[3], "<a$matches[1]href=$matches[2]");
+		}, $content);
+		$content=preg_replace($searcharray[1], $replacearray[1], $content);
+
 		ob_end_clean();
 		echo $content;
 	}
