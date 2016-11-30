@@ -74,7 +74,7 @@ $func_items = array('mysqli_connect', 'gethostbyname', 'file_get_contents', 'xml
 $env_items = array
 (
 	'os' => array('c' => 'PHP_OS', 'r' => 'notset', 'b' => 'unix'),
-	'php' => array('c' => 'PHP_VERSION', 'r' => '4.0', 'b' => '5.0'),
+	'php' => array('c' => 'PHP_VERSION', 'r' => '5.4', 'b' => '7.0'),
 	'attachmentupload' => array('r' => 'notset', 'b' => '2M'),
 	'gdversion' => array('r' => '1.0', 'b' => '2.0'),
 	'diskspace' => array('r' => '10M', 'b' => 'notset'),
